@@ -1,0 +1,23 @@
+{
+    "name": "be.elab.hexachessmirror.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "Unity.InputSystem",
+        "Mirror",
+        "Mirror.Transports",
+        "Mirror.Components",
+        "Mirror.CompilerSymbols",
+        "Mirror.Examples",
+        "Mirror.Authenticators",
+        "Unity.XR.Interaction.Toolkit"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
