@@ -154,7 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f5e58669abb2049bed0e1f17dc4ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: be.elab.hexachessmirror.Runtime::HexaChessMirrorMono_HideShowIfLocal
-  m_networkIdentityToReadFrom: {fileID: 7439125029384235317}
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
   m_onIsLocalPlayerEvent:
     m_PersistentCalls:
       m_Calls:
@@ -191,6 +193,7 @@ MonoBehaviour:
   m_onIsNotLocalPlayerBoolEvent:
     m_PersistentCalls:
       m_Calls: []
+  m_resultDebugIsLocalPlayer: 0
 --- !u!1 &7186155876302386865
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +311,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1554409344683764884, guid: e95cf3373c4d1df40bce5646c8074ffe, type: 3}
+    - {fileID: 6973964791543148900, guid: e95cf3373c4d1df40bce5646c8074ffe, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -375,7 +380,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerHandSphere (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6938956691742754107, guid: cdb3c0bb23fcb844083a08bf2a2c5937, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -437,7 +443,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerHandSphere
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6938956691742754107, guid: cdb3c0bb23fcb844083a08bf2a2c5937, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -9,7 +9,8 @@
         "Mirror.CompilerSymbols",
         "Mirror.Examples",
         "Mirror.Authenticators",
-        "Unity.XR.Interaction.Toolkit"
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.XR.OpenXR"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
