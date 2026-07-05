@@ -6,19 +6,14 @@ using Mirror.Discovery;
 public class HexaChessMirrorMono_FindOrBeServer : MonoBehaviour
 {
     [Tooltip("How long to wait for a server reply before giving up and becoming a host (in seconds)")]
-    public float searchTimeout = 2.5f;
-
-    // Reference to the NetworkDiscovery component on this GameObject
+    public float searchTimeout = 5f;
     public NetworkDiscovery discovery;
 
     private bool serverFound = false;
 
     void Start()
     {
-        // Subscribe to the event that fires if a server replies
         discovery.OnServerFound.AddListener(OnServerFound);
-
-        // Start the automatic process
         StartCoroutine(AutoConnectRoutine());
     }
 
@@ -26,16 +21,9 @@ public class HexaChessMirrorMono_FindOrBeServer : MonoBehaviour
     {
         Debug.Log("Starting LAN search for a server...");
 
-        // Reset our flag
         serverFound = false;
-
-        // Begin listening for servers
         discovery.StartDiscovery();
-
-        // Pause the coroutine and wait for the timeout period
         yield return new WaitForSeconds(searchTimeout);
-
-        // If the coroutine resumes and the flag is still false, no server was found
         if (!serverFound)
         {
             Debug.Log("No server found within timeframe. Becoming the Server/Host.");

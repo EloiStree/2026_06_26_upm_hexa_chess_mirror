@@ -38,32 +38,32 @@ public class HexaChessMirrorMono_TimerState : NetworkBehaviour
 
     public void FixedUpdate()
     {
-        if (!isServer)
-            return;
-
-        if (m_isWhiteTurnOn)
+        if (isServer)
         {
-            if (m_timeLeftWhite > 0.0f) { 
-                m_timeLeftWhite -= Time.fixedDeltaTime;
-                if (m_timeLeftWhite < 0.0f) {
-                    m_timeLeftWhite = 0.0f;
-                    RpcWhiteMissingTime();
-                }
-            }
-        }
-        if (m_isBlackTurnOn)
-        {
-            if (m_timeLeftBlack > 0.0f)
+            if (m_isWhiteTurnOn)
             {
-                m_timeLeftBlack -= Time.fixedDeltaTime;
-                if (m_timeLeftBlack < 0.0f)
-                {
-                    m_timeLeftBlack = 0.0f;
-                    RpcBlackMissingTime();
+                if (m_timeLeftWhite > 0.0f) { 
+                    m_timeLeftWhite -= Time.fixedDeltaTime;
+                    if (m_timeLeftWhite < 0.0f) {
+                        m_timeLeftWhite = 0.0f;
+                        RpcWhiteMissingTime();
+                    }
                 }
             }
-        }
+            if (m_isBlackTurnOn)
+            {
+                if (m_timeLeftBlack > 0.0f)
+                {
+                    m_timeLeftBlack -= Time.fixedDeltaTime;
+                    if (m_timeLeftBlack < 0.0f)
+                    {
+                        m_timeLeftBlack = 0.0f;
+                        RpcBlackMissingTime();
+                    }
+                }
+            }
 
+        } 
         m_event.m_onClientIsWhiteTurnUpdated?.Invoke(m_isWhiteTurnOn);
         m_event.m_onClientIsBlackTurnUpdated?.Invoke(m_isBlackTurnOn);
         m_event.m_onClientTimeLeftWhiteUpdated?.Invoke(m_timeLeftWhite);

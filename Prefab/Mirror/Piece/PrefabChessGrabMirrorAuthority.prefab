@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 4799660017702374333}
   - component: {fileID: 5107635550526137772}
   - component: {fileID: 6613928673911151537}
+  - component: {fileID: 1747859548730968698}
   m_Layer: 0
   m_Name: PrefabChessGrabMirrorAuthority
   m_TagString: Untagged
@@ -351,6 +352,22 @@ MonoBehaviour:
   positionSensitivity: 0.01
   rotationSensitivity: 0.01
   scaleSensitivity: 0.01
+--- !u!114 &1747859548730968698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2612222994001707597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cffacee3aaa325418b564979408f3cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.hexachessmirror.Runtime::HexaChessMirrorMono_SaveStartPoint
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  m_whatToAffect: {fileID: 331201069816849319}
 --- !u!1 &3484745774687455966
 GameObject:
   m_ObjectHideFlags: 0
