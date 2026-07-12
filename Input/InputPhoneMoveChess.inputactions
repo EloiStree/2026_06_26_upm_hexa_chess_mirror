@@ -1,0 +1,110 @@
+{
+    "version": 1,
+    "name": "InputPhoneMoveChess",
+    "maps": [
+        {
+            "name": "InputPhoneMoveChess",
+            "id": "accb09f4-b46b-488d-a803-4ebdc200590c",
+            "actions": [
+                {
+                    "name": "ClickOnScreen",
+                    "type": "Button",
+                    "id": "7f92b4b4-c930-468d-9ef0-9fb78963846c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PositionOnSCreen",
+                    "type": "Value",
+                    "id": "4313d05e-0f25-4f84-a8b9-24817dec98d0",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7feb2ed5-9609-4b93-8669-1f196065cdce",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClickOnScreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cab2d502-b539-4886-8e94-56c395cd89b3",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClickOnScreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "973c0fec-ac19-448f-a79a-8db7bd7bcc84",
+                    "path": "<Pen>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClickOnScreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a27b873-aa4b-448c-a018-4956ea702dfb",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PositionOnSCreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cc0b3a39-0e04-4d53-b405-5a5929b0ac6d",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PositionOnSCreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "25d6cc0d-2f21-4a4e-bf28-ebe921ffd659",
+                    "path": "<Pen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PositionOnSCreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "585b5f89-f931-469f-afbf-ff6dcc5358f2",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PositionOnSCreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

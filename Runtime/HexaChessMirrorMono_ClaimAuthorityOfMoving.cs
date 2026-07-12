@@ -1,9 +1,32 @@
 ﻿using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class HexaChessMirrorMono_ClaimAuthorityOfMoving : NetworkBehaviour
 {
+
+    public static List<HexaChessMirrorMono_ClaimAuthorityOfMoving> Instances { get; } = new();
+
+    private void OnEnable()
+    {
+        Instances.Add(this);
+    }
+    private void OnDisable()
+    {
+        Instances.Remove(this);
+    }
+
+    [ContextMenu("Claim All Chess Pieces")]
+    public void ClaimAllChessPiece() { 
+    
+        foreach (var piece in Instances)
+        {
+            piece.ClaimAuthority();
+        }
+    }
+
     [Header("Target Object")]
     [SerializeField] private NetworkIdentity m_toAffect;
 
