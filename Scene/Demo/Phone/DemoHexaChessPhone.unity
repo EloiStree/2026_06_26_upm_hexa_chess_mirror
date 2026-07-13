@@ -1267,8 +1267,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27059808, y: 0.6532815, z: -0.27059808, w: 0.6532815}
-  m_LocalPosition: {x: 1.4870331, y: 0.7071069, z: 2.19414}
+  m_LocalRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
+  m_LocalPosition: {x: 2.19414, y: 0.7071068, z: 1.4870332}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1332,7 +1332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: be.elab.hexachess.Runtime::Eloi.HexaChess.HexaChessMono_RotateAroundCenterOfTarget
   m_centerAnchor: {fileID: 571268248}
   m_whatToMoveAround: {fileID: 330585546}
-  m_rotationAroundYEuler1: 90
+  m_rotationAroundYEuler1: 0
   m_rotationAroundXEuler2: 45
   m_zoom_distance: 1
   m_panelOffset: {x: 0, y: 0}
@@ -2130,6 +2130,7 @@ Transform:
   - {fileID: 1301693197}
   - {fileID: 269269096}
   - {fileID: 1327691721}
+  - {fileID: 645819704}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &618627822
@@ -2284,6 +2285,83 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &645819703
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 571268248}
+    m_Modifications:
+    - target: {fileID: 2241405514495581834, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+      propertyPath: m_Name
+      value: ChessTimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377434669896598527, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.442
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377434669896598527, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377434669896598527, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377434669896598527, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377434669896598527, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377434669896598527, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000031292436
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377434669896598527, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377434669896598527, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377434669896598527, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377434669896598527, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747554844015753056, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+      propertyPath: sceneId
+      value: 3718916432
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+--- !u!4 &645819704 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4377434669896598527, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+  m_PrefabInstance: {fileID: 645819703}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &645819705 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5118096397693561721, guid: 610982ea4246d76479e84c04f2cb4bec, type: 3}
+  m_PrefabInstance: {fileID: 645819703}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5678be43afe7302418771ef6f12b68ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.hexachessmirror.Runtime::HexaChessMirrorMono_TimerState
 --- !u!1 &649939518
 GameObject:
   m_ObjectHideFlags: 0
@@ -6039,6 +6117,56 @@ MonoBehaviour:
   m_positionWhenClickedOn: {x: 0, y: 0, z: 0}
   m_positionBoardClicked: {x: 0, y: 0, z: 0}
   m_lastClickedOn: {fileID: 0}
+  m_events:
+    m_onChessTagSelected:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onChessTagMoved:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onWhiteSelected:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onWhiteMoved:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 645819705}
+          m_TargetAssemblyTypeName: HexaChessMirrorMono_TimerState, be.elab.hexachessmirror.Runtime
+          m_MethodName: CmdSetAsBlackTurn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onBlackSelected:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onBlackMoved:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 645819705}
+          m_TargetAssemblyTypeName: HexaChessMirrorMono_TimerState, be.elab.hexachessmirror.Runtime
+          m_MethodName: CmdSetAsWhiteTurn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    m_onChessEnumSelected:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onChessEnumMoved:
+      m_PersistentCalls:
+        m_Calls: []
+  m_unfocusOnBoardClick: 1
 --- !u!1 &2107166124
 GameObject:
   m_ObjectHideFlags: 0

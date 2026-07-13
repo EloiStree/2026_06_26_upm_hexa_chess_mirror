@@ -40,18 +40,7 @@
                 {
                     "name": "",
                     "id": "cab2d502-b539-4886-8e94-56c395cd89b3",
-                    "path": "<Touchscreen>/Press",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ClickOnScreen",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "973c0fec-ac19-448f-a79a-8db7bd7bcc84",
-                    "path": "<Pen>/press",
+                    "path": "<Touchscreen>/touch0/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -72,30 +61,8 @@
                 },
                 {
                     "name": "",
-                    "id": "cc0b3a39-0e04-4d53-b405-5a5929b0ac6d",
-                    "path": "<Touchscreen>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PositionOnSCreen",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "25d6cc0d-2f21-4a4e-bf28-ebe921ffd659",
-                    "path": "<Pen>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PositionOnSCreen",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "585b5f89-f931-469f-afbf-ff6dcc5358f2",
-                    "path": "<Pointer>/position",
+                    "path": "<Touchscreen>/primaryTouch/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -10,7 +10,8 @@
         "Mirror.Examples",
         "Mirror.Authenticators",
         "Unity.XR.Interaction.Toolkit",
-        "Unity.XR.OpenXR"
+        "Unity.XR.OpenXR",
+        "HexaChess"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

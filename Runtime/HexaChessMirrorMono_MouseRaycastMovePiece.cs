@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Eloi.HexaChess;
+using UnityEngine;
+using UnityEngine.Events;
 
 public class HexaChessMirrorMono_MouseRaycastMovePiece : MonoBehaviour
 {
@@ -12,6 +14,23 @@ public class HexaChessMirrorMono_MouseRaycastMovePiece : MonoBehaviour
     public Vector3 m_positionBoardClicked;
     public HexaChessMirrorMono_ClaimAuthorityOfMoving m_lastClickedOn;
 
+
+    public Events m_events;
+
+    [System.Serializable]
+    public class Events
+    {
+        public UnityEvent<HexaChessMono_TagChessEnumType> m_onChessTagSelected;
+        public UnityEvent<HexaChessMono_TagChessEnumType> m_onChessTagMoved;
+        public UnityEvent m_onWhiteSelected;
+        public UnityEvent m_onWhiteMoved;
+        public UnityEvent m_onBlackSelected;
+        public UnityEvent m_onBlackMoved;
+        public UnityEvent<HexaChessEnumColor, HexaChessEnumType> m_onChessEnumSelected;
+        public UnityEvent<HexaChessEnumColor, HexaChessEnumType> m_onChessEnumMoved;
+    }
+
+    public bool m_unfocusOnBoardClick = true;
     private void Awake()
     {
         if (m_cameraToUse == null)
@@ -83,6 +102,19 @@ public class HexaChessMirrorMono_MouseRaycastMovePiece : MonoBehaviour
 
         SetDebugTransformPosition(m_debugChessClickedOn, hitPoint);
         SetDebugTransformPosition(m_debugNotChessClickedOn, Vector3.zero);
+
+
+        var enumScript = clickedOn.GetComponent<HexaChessMono_TagChessEnumType>();
+        if (enumScript != null)
+        {
+            m_events.m_onChessTagSelected?.Invoke(enumScript);
+            if (enumScript.m_chessColor == HexaChessEnumColor.Black)
+                m_events.m_onBlackSelected?.Invoke();
+            if (enumScript.m_chessColor == HexaChessEnumColor.White)    
+                m_events.m_onWhiteSelected?.Invoke();
+            m_events.m_onChessEnumSelected?.Invoke(enumScript.m_chessColor, enumScript.m_chessType);
+
+        }
     }
 
     private void HandleBoardClicked(Vector3 hitPoint)
@@ -99,6 +131,25 @@ public class HexaChessMirrorMono_MouseRaycastMovePiece : MonoBehaviour
 
         m_lastClickedOn.ClaimAuthority();
         m_lastClickedOn.transform.position = hitPoint;
+
+
+
+
+        var enumScript = m_lastClickedOn.GetComponent<HexaChessMono_TagChessEnumType>();
+        if (enumScript != null)
+        {
+            m_events.m_onChessTagMoved?.Invoke(enumScript);
+            if (enumScript.m_chessColor == HexaChessEnumColor.Black)
+                m_events.m_onBlackMoved?.Invoke();
+            if (enumScript.m_chessColor == HexaChessEnumColor.White)
+                m_events.m_onWhiteMoved?.Invoke();
+            m_events.m_onChessEnumMoved?.Invoke(enumScript.m_chessColor, enumScript.m_chessType);
+        }
+
+        if (m_unfocusOnBoardClick)
+        {
+            m_lastClickedOn = null;
+        }
     }
 
     private static void SetDebugTransformPosition(Transform target, Vector3 position)
