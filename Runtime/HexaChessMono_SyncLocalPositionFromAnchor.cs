@@ -40,7 +40,7 @@ public class HexaChessMono_SyncLocalPositionFromBoardAnchor : NetworkBehaviour
 
     private bool IsPlayerMovingThePieceAllowed()
     {
-        return m_toObserveAndMove != null && this.authority && isOwned;
+        return m_toObserveAndMove != null  && isOwned;
     }
 
 
@@ -98,7 +98,7 @@ public class HexaChessMono_SyncLocalPositionFromBoardAnchor : NetworkBehaviour
     [ClientRpc]
     public void RpcUpdateLocalPositionAndRotation(Vector3 newLocalPercentPosition, Quaternion newLocalRotation)
     {
-        if (!authority)
+        if (!isOwned)
         { 
             m_anchorPoint.GetPositionAndRotationFromInPercentValue(
                 newLocalPercentPosition, newLocalRotation,

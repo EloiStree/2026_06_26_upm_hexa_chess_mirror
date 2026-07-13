@@ -14,7 +14,6 @@ public class HexaChessMirrorMono_MouseRaycastMovePiece : MonoBehaviour
     public Vector3 m_positionBoardClicked;
     public HexaChessMirrorMono_ClaimAuthorityOfMoving m_lastClickedOn;
 
-
     public Events m_events;
 
     [System.Serializable]
@@ -74,6 +73,7 @@ public class HexaChessMirrorMono_MouseRaycastMovePiece : MonoBehaviour
 
         if (TryGetClickedPiece(hitInfo, out HexaChessMirrorMono_ClaimAuthorityOfMoving clickedOn))
         {
+            clickedOn.ClaimAuthority();
             HandlePieceClicked(clickedOn, hitInfo.point);
             return;
         }
@@ -101,7 +101,7 @@ public class HexaChessMirrorMono_MouseRaycastMovePiece : MonoBehaviour
         m_positionWhenClickedOn = clickedOn.transform.position;
 
         SetDebugTransformPosition(m_debugChessClickedOn, hitPoint);
-        SetDebugTransformPosition(m_debugNotChessClickedOn, Vector3.zero);
+        SetDebugTransformPosition(m_debugNotChessClickedOn, hitPoint);
 
 
         var enumScript = clickedOn.GetComponent<HexaChessMono_TagChessEnumType>();
@@ -122,7 +122,6 @@ public class HexaChessMirrorMono_MouseRaycastMovePiece : MonoBehaviour
         m_positionBoardClicked = hitPoint;
 
         SetDebugTransformPosition(m_debugNotChessClickedOn, hitPoint);
-        SetDebugTransformPosition(m_debugChessClickedOn, Vector3.zero);
 
         if (m_lastClickedOn == null)
         {
