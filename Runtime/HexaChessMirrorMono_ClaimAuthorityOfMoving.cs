@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
 using UnityEngine.Events;
@@ -83,5 +84,13 @@ public class HexaChessMirrorMono_ClaimAuthorityOfMoving : NetworkBehaviour
     {
         if (m_toAffect == null) return false;
         return m_toAffect.isOwned;
+    }
+
+    public static void S_ClaimThemAll()
+    {
+        foreach (var piece in Instances)
+        {
+            piece.ClaimAuthority();
+        }
     }
 }

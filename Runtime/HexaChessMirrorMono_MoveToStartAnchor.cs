@@ -1,4 +1,5 @@
 using Mirror;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -71,6 +72,15 @@ public class HexaChessMirrorMono_MoveToStartAnchor : NetworkBehaviour
         {
             m_whatToAffect.position = m_whereToSpawn.position;
             m_whatToAffect.rotation = m_whereToSpawn.rotation;
+        }
+    }
+
+    public static void S_ResetThemAllAtStart()
+    {
+        foreach (var piece in Instances)
+        {
+            if (piece != null)
+                piece.CmdResetAllPiecesAtStartPoint();
         }
     }
 }

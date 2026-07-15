@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 7833211274816267496}
   - component: {fileID: 5006530153624847685}
   - component: {fileID: 340622809263660209}
+  - component: {fileID: 3504296155165404674}
   m_Layer: 0
   m_Name: PrefabChessGrabMirrorAuthority
   m_TagString: Untagged
@@ -454,6 +455,12 @@ MonoBehaviour:
   syncInterval: 0
   m_toAffect: {fileID: 5006530153624847685}
   currentOwnerNetId: 0
+  m_onOwnerChangedFromTo:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onClaimState:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &2221584770364789996
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -667,3 +674,22 @@ MonoBehaviour:
   syncInterval: 0
   m_whatToAffect: {fileID: 1403097074545293316}
   m_whereToSpawn: {fileID: 0}
+--- !u!114 &3504296155165404674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7503070105199879349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0585cc244f8e3874d9d0eac4ac05e8f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: be.elab.hexachessmirror.Runtime::HexaChessMono_OnGrapReleaseXR
+  m_rigidbody: {fileID: 2221584770364789996}
+  m_grapInteraction: {fileID: 3036037695674965337}
+  m_useGravityOnRelease: 0
+  m_disableGravityOnRelease: 1
+  m_onRelease:
+    m_PersistentCalls:
+      m_Calls: []
